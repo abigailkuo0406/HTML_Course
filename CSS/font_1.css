@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100&display=swap');
+
+@font-face {
+    font-family: JustOldFashion;
+    src: url(../fonts/JustOldFashion.ttf);
+}
+
+.font1 {
+    font-family: JustOldFashion;
+}
+
+@font-face {
+    font-family: Scriptin;
+    src: url(../fonts/SCRIPTIN.ttf);
+}
+
+.font2 {
+    font-family: Scriptin;
+}
+
+.font3 {
+    font-family: 'Noto Sans TC', sans-serif;
+}

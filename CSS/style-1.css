@@ -1,0 +1,31 @@
+.st1 {
+    color: rgb(124, 0, 128);
+    text-transform: capitalize;
+}
+
+.st2 {
+    font-style: italic;
+    text-decoration: underline;
+    color: blue;
+}
+
+.col1 {
+    color: pink
+}
+
+.col2 {
+    color: yellow
+}
+
+.size1 {
+    font-size: 20px;
+}
+
+.size2 {
+    font-size: 30px;
+}
+
+p {
+    color: orange;
+    font-size: 200%;
+}

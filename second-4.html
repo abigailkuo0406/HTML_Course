@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS練習--自訂選取器</title>
+    <!-- 外掛樣式表掛在自訂樣式表前，自訂樣式才不會被覆蓋掉 -->
+    <link rel="stylesheet" href="CSS/style-1.css">
+    <style>
+        /* .st1 {
+            color: green;
+            text-transform: capitalize;
+        }
+
+        .st2 {
+            font-style: italic;
+            text-decoration: underline;
+            color: blue;
+        }
+
+        .col1 {
+            color: pink
+        }
+
+        .col2 {
+            color: yellow
+        }
+
+        .size1 {
+            font-size: 20px;
+        }
+
+        .size2 {
+            font-size: 30px;
+        } */
+        p {
+            color: greenyellow
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1 class="st1">Team&Player</h1>
+    <h2 class="col1 size1">spur</h2>
+    <h3 class="col2 size2">Tim</h3>
+    <h2 class="st2">rocket</h2>
+    <h3 class="st2">Harden</h3>
+    <p>this is a paragraph!</p>
+</body>
+
+</html>

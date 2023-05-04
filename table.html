@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>表格製作練習</title>
+    <style>
+        table {
+            width: 100%;
+            border: 3px solid black;
+            /* border-collapse: collapse; */
+            border-spacing: 0px;
+            border-radius: 20px;
+
+        }
+
+        td,
+        th {
+            border: 1px solid gray;
+            text-align: center;
+        }
+
+        thead {
+            background-color: green;
+            color: white;
+            text-transform: capitalize;
+        }
+
+        tbody {
+            background-color: rgb(184, 245, 184);
+            font-weight: bolder;
+        }
+
+        /* 奇數列跟偶數列設定背景色後會蓋過tbody設定的背景色 */
+        tbody tr:nth-child(2n) {
+            background-color: rgb(117, 233, 179);
+        }
+
+        tbody tr:nth-child(2n+1) {
+            background-color: white;
+        }
+
+        /* 滑鼠游標移動到該列會變色 */
+        tbody tr:hover {
+            background-color: yellow;
+
+        }
+
+        tr:first-child th:first-child {
+            border-top-left-radius: 18px;
+        }
+
+        tr:first-child th:last-child {
+            border-top-right-radius: 18px;
+        }
+
+        tr:last-child td:first-child {
+            border-bottom-left-radius: 18px;
+        }
+
+        tr:last-child td:last-child {
+            border-bottom-right-radius: 18px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <table>
+        <caption>
+            <h2>表格練習</h2>
+        </caption>
+        <thead>
+            <tr>
+                <th>column 1</th>
+                <th>column 2</th>
+                <th>column 3</th>
+                <th>column 4</th>
+            </tr>
+            <tr>
+                <th colspan="2">column a</th>
+                <!-- <th>column b</th> -->
+                <th colspan="2">column c</th>
+                <!-- <th>column d</th> -->
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td colspan="4">1</td>
+                <!-- <td>2</td>
+            <td>3</td>
+            <td>4</td> -->
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+            </tr>
+            <tr>
+                <td rowspan="3">1</td>
+                <td rowspan="3">2</td>
+                <td rowspan="3">3</td>
+                <td>4</td>
+                <!-- 這裡如果把第四欄的儲存格也垂直合併三列，就相當於原本的第三四五列全數合併至第三列，因此會直接少掉兩列
+             -->
+            </tr>
+            <tr>
+                <!-- <td>1</td> -->
+                <!-- <td>2</td> -->
+                <!-- <td>3</td> -->
+                <td>4</td>
+            </tr>
+            <tr>
+                <!-- <td>1</td> -->
+                <!-- <td>2</td> -->
+                <!-- <td>3</td> -->
+                <td>4</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>

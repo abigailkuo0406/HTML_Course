@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>表單製作練習</title>
+    <style>
+        fieldset {
+            width: 600px;
+            margin: 15px;
+            border: 2px solid rgb(119, 218, 177);
+            border-radius: 20px;
+            /* background-color: aqua; */
+
+        }
+
+        legend {
+            font-size: 16pt;
+            font-weight: bolder;
+            font-style: italic;
+            color: rgb(46, 214, 144);
+            /* text-align: center; */
+            margin-left: 30px;
+            /* background-color: aquamarine; */
+        }
+
+        .st_form_page {
+            width: 600px;
+            margin: auto;
+        }
+
+        .st1 {
+            width: 500px;
+            margin: 20px;
+            border-bottom: 1px dashed rgb(53, 214, 147);
+            padding-bottom: 10px;
+            background-color: bisque;
+        }
+
+        .st2_botton {
+            width: 600px;
+            margin: 20px;
+            text-align: center;
+        }
+
+        .st3 {
+            /* border: 1px solid red; */
+            width: 110px;
+            /* 對inline元素(例如label)使用width樣式是無效的，因為inline元素的長度是依據內容長度而定，在這邊是因為後面加上了float元素，width的效果才顯現 */
+            float: left;
+            /* 使用float讓文字浮動到與欄位相同高度 */
+            text-align: right;
+            padding-right: 2px;
+            /* 使用padding去拉開文字與欄位的間距比較合適，不要用margin */
+
+        }
+    </style>
+</head>
+
+<body>
+    <form action="#" method="get">
+        <!-- method屬性值輸入get會使資料透過網址列傳送，沒有加密效果；通常屬性值是使用post，將資料透過http封包傳送，才不會將資料顯示在網址列上 -->
+        <div class="st_form_page">
+            <fieldset>
+                <legend>
+                    基本資料一<em>(必填)</em>
+                </legend>
+                <div class="st1">
+                    <label for="account" class="st3">帳號：</label>
+                    <!-- label 元素的for屬性輸入自訂值 -->
+                    <input type="text" id="account" name="account" autofocus autocomplete="off" placeholder="請輸入..."
+                        size="10">
+                    <!-- input元素的id屬性輸入與上述for屬性相同的自訂值，則可以製作游標移到文字上、欄位顯示輸入游標的效果 -->
+                </div>
+                <div class="st1">
+                    <label for="pwd" class="st3">密碼：</label>
+                    <input type="password" id="pwd" name="pwd" maxlength="8">
+                </div>
+
+                <div class="st1">
+                    <label class="st3">性別：</label>
+                    <!-- 一個選擇控制項放在一個label元素裡，才有游標點文字、該選項被勾選的效果 -->
+                    <label>
+                        <input type="radio" name="gender" id="" value="male">男
+                    </label>
+                    <label>
+                        <input type="radio" name="gender" id="" value="female">女
+                    </label>
+                </div>
+                <div class="st1">
+                    <label for="idNum" class="st3">
+                        身分證字號：
+                    </label>
+                    <input type="text" name="idNum" id="idNum" pattern="[a-z,A-Z]{1}[1-2,8-9]{1}\d{8}" maxlength="10">
+                </div>
+
+                <div class="st1">
+                    <label class="st3">興趣：</label>
+                    <label>
+                        <input type="checkbox" name="hobby" id="" value="music">音樂
+                    </label>
+                    <label>
+                        <input type="checkbox" name="hobby" id="" value="movie">電影
+                    </label>
+                    <label>
+                        <input type="checkbox" name="hobby" id="" value="reading">閱讀
+                    </label>
+                    <label>
+                        <input type="checkbox" name="hobby" id="" value="sports">運動
+                    </label>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>
+                    基本資料二
+                </legend>
+                <div class="st1">
+                    <label class="st3">
+                        生日：
+                    </label>
+                    <input type="date" name="birth" value="2000-01-01">
+                </div>
+                <div class="st1">
+                    <label for="email" class="st3">
+                        E-mail：
+                    </label>
+                    <input type="email" name="email" id="email">
+                </div>
+                <div class="st1">
+                    <label class="st3">
+                        居住地：
+                    </label>
+                    <select name="living" size="2">
+                        <option value="TPE">台北市</option>
+                        <option value="TPH">新北市</option>
+                        <option value="TYN">桃園市</option>
+
+                    </select>
+                </div>
+                <div class="st1">
+                    <label for="adress" class="st3">
+                        完整地址：
+                    </label>
+                    <input type="text" id="adress" name="adress">
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>
+                    基本資料三
+                </legend>
+                <div class="st1">
+                    <label class="st3">
+                        網站需求：
+                    </label>
+                    <input type="color" name="likecol" list="collist">
+                    <datalist id="collist">
+                        <option value="black">黑色</option>
+                        <option value="red"></option>
+                        <option value="blue">
+                    </datalist>
+                </div>
+                <div class="st1">
+                    <label class="st3">
+                        照片上傳：
+                    </label>
+                    <input type="file" name="file1" multiple>
+                </div>
+
+                <div class="st1">
+                    <label for="memo" class="st3">意見：</label>
+                    <textarea cols="50" rows="15" id="memo" name="memo" readonly></textarea>
+                </div>
+            </fieldset>
+            <div class="st2_botton">
+                <input type="submit" id="submit" name="submit" value="送出">
+                <input type="reset" id="reset" name="reset" value="清除">
+                <input type="button" id="button1" name="button1" value="按鈕一" disabled>
+                <!-- 控制項功能預設是enabled(開啟)，要關閉(取消)功能要輸入disabled -->
+
+            </div>
+
+        </div>
+
+    </form>
+
+</body>
+
+</html>

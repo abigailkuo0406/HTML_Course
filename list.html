@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Refresh" content="60">
+    <title>清單練習</title>
+    <style>
+        .list_ul {
+            list-style-type: square;
+        }
+
+        .list_ol {
+            list-style-type: lower-roman;
+        }
+
+        .list_ul2 {
+            list-style-type: none;
+            list-style-image: url(pic/285661_star_icon.png);
+            border: 10px inset green;
+            border-radius: 25px 0px 0px 0px
+        }
+
+        .postition {
+            background-color: aquamarine;
+            list-style-position: inside;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="http://www.google.com">Google</a>
+    <a href="first.html">First</a>
+    <a href="hyperlink.html">Link</a>
+    <a href="mailto:christinekuo905@gmail.com">歡迎來信</a>
+
+
+    <h2>美國大聯盟介紹</h2>
+    <dl>
+        <dt>英文全名：</dt>
+        <dd>Major League Baseball</dd>
+        <dt>隊伍總數：</dt>
+        <dd>30隊</dd>
+        <dt>分區：</dt>
+        <dd>
+            <ul class="list_ul2">
+                <li>美聯</li>
+                <li>國聯</li>
+            </ul>
+        </dd>
+
+    </dl>
+
+
+    <h2>球員名單</h2>
+
+    <ul class="list_ul">
+        <li>控球後衛
+            <ol class="list_ol">
+                <li>luka</li>
+                <li>green</li>
+                <li>gay</li>
+            </ol>
+        </li>
+        <!-- 清單符號預設位置是outside，下一行示範inside的位置 **平時不在<li>做修改 -->
+        <li class="postition">得分後衛</li>
+        <li style="background-color:aquamarine">小前鋒</li>
+        <li>大前鋒</li>
+        <li>中鋒</li>
+    </ul>
+
+    <h2>大西洋組排名</h2>
+    <ol>
+        <li>小牛</li>
+        <li>馬刺</li>
+        <li>火箭</li>
+    </ol>
+</body>
+
+</html>
